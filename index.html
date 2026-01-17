@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简约内容页面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f6f8fa;
+            color: #24292f;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            border-radius: 6px;
+            border: 1px solid #d0d7de;
+            overflow: hidden;
+        }
+        
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid #d0d7de;
+            background-color: #f6f8fa;
+        }
+        
+        .header-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .header-subtitle {
+            color: #57606a;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .sidebar {
+            width: 240px;
+            border-right: 1px solid #d0d7de;
+            padding: 24px;
+            background-color: #f6f8fa;
+        }
+        
+        .sidebar h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #57606a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links {
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-bottom: 8px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #24292f;
+            font-size: 14px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            display: block;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background-color: #eaeef2;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 32px;
+        }
+        
+        .markdown-body {
+            font-size: 16px;
+            max-width: 800px;
+        }
+        
+        .markdown-body h1 {
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid #d8dee4;
+            margin-bottom: 16px;
+        }
+        
+        .markdown-body h2 {
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid #d8dee4;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .markdown-body p {
+            margin-bottom: 16px;
+        }
+        
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 16px;
+            padding-left: 2em;
+        }
+        
+        .markdown-body code {
+            background-color: rgba(175, 184, 193, 0.2);
+            border-radius: 6px;
+            padding: 0.2em 0.4em;
+            font-size: 85%;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+        }
+        
+        .markdown-body pre {
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            padding: 16px;
+            overflow: auto;
+            margin-bottom: 16px;
+        }
+        
+        .markdown-body blockquote {
+            padding: 0 1em;
+            color: #57606a;
+            border-left: 0.25em solid #d0d7de;
+            margin: 0 0 16px 0;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 24px;
+            text-align: center;
+            color: #57606a;
+            font-size: 14px;
+            border-top: 1px solid #d0d7de;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #d0d7de;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">简约内容展示模板</div>
+            <div class="header-subtitle">一个专注于文本内容展示的GitHub风格网页模板</div>
+        </header>
+        
+        <div class="content-wrapper">
+            <nav class="sidebar">
+                <h3>内容导航</h3>
+                <ul class="nav-links">
+                    <li><a href="#section1">简介</a></li>
+                    <li><a href="#section2">功能特点</a></li>
+                    <li><a href="#section3">使用说明</a></li>
+                    <li><a href="#section4">代码示例</a></li>
+                    <li><a href="#section5">常见问题</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 24px;">相关链接</h3>
+                <ul class="nav-links">
+                    <li><a href="https://github.com" target="_blank">GitHub官网</a></li>
+                    <li><a href="https://docs.github.com" target="_blank">GitHub文档</a></li>
+                    <li><a href="https://pages.github.com" target="_blank">GitHub Pages</a></li>
+                </ul>
+            </nav>
+            
+            <main class="main-content">
+                <article class="markdown-body">
+                    <h1 id="section1">简约内容展示模板</h1>
+                    <p>这是一个简约、实用的GitHub风格网页模板，专注于文本内容的清晰展示。模板采用简洁的设计，避免不必要的视觉元素干扰，确保内容可读性。</p>
+                    
+                    <h2 id="section2">功能特点</h2>
+                    <ul>
+                        <li><strong>简洁设计</strong>：采用GitHub风格的UI设计，干净、专业</li>
+                        <li><strong>响应式布局</strong>：适配各种屏幕尺寸，从手机到桌面设备</li>
+                        <li><strong>内容友好</strong>：优化文本显示，提高阅读体验</li>
+                        <li><strong>代码高亮</strong>：内置代码块样式，适合技术文档</li>
+                        <li><strong>轻量快速</strong>：无冗余代码，加载速度快</li>
+                    </ul>
+                    
+                    <h2 id="section3">使用说明</h2>
+                    <p>此模板可直接用于项目文档、博客文章、个人介绍等内容展示场景。只需将您的文本内容按照Markdown格式替换到相应位置即可。</p>
+                    <p>如果您需要进一步自定义样式，可以直接修改CSS部分。模板使用模块化CSS结构，便于调整。</p>
+                    
+                    <h2 id="section4">代码示例</h2>
+                    <p>以下是一个简单的HTML结构示例：</p>
+                    
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;我的简约页面&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;欢迎访问&lt;/h1&gt;
+    &lt;p&gt;这是一个简约的网页示例。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    
+                    <p>以下是一个JavaScript函数示例：</p>
+                    
+                    <pre><code>// 简单的欢迎函数
+function showWelcomeMessage(name) {
+    const hour = new Date().getHours();
+    let greeting;
+    
+    if (hour < 12) {
+        greeting = "早上好";
+    } else if (hour < 18) {
+        greeting = "下午好";
+    } else {
+        greeting = "晚上好";
+    }
+    
+    return `${greeting}, ${name}! 欢迎访问我们的网站。`;
+}
+
+// 使用示例
+console.log(showWelcomeMessage("张三"));</code></pre>
+                    
+                    <h2 id="section5">常见问题</h2>
+                    
+                    <h3>如何修改页面颜色主题？</h3>
+                    <p>可以通过修改CSS中的颜色变量来调整主题。主要颜色定义在<code>:root</code>选择器中。</p>
+                    
+                    <h3>如何添加更多页面？</h3>
+                    <p>您可以复制此HTML文件，并修改其中的内容部分，然后通过导航链接将它们连接起来。</p>
+                    
+                    <h3>这个模板支持移动设备吗？</h3>
+                    <p>是的，模板完全响应式，在移动设备上会自动调整布局以获得最佳浏览体验。</p>
+                    
+                    <blockquote>
+                        <p><strong>提示：</strong> 此模板基于GitHub的Markdown样式设计，因此特别适合展示技术文档、项目说明等内容。</p>
+                    </blockquote>
+                </article>
+            </main>
+        </div>
+        
+        <footer>
+            <p>© 2023 简约内容展示模板 | 基于GitHub风格设计</p>
+            <p style="margin-top: 8px; font-size: 13px;">最后更新：2023年10月15日</p>
+        </footer>
+    </div>
+
+    <script>
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 当前年份更新
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.querySelector('footer p');
+            if(yearElement && yearElement.textContent.includes('2023')) {
+                const currentYear = new Date().getFullYear();
+                yearElement.innerHTML = yearElement.innerHTML.replace('2023', currentYear);
+            }
+        });
+    </script>
+</body>
+</html>
